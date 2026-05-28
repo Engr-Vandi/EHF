@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Our Team — Emmanuel Humanitarian Foundation (EHF)</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --nv:#1a2e6e;--nv2:#111f4d;--nv3:#243580;
+  --gn:#2e8b57;--gn2:#3aab6d;--gn3:#e8f5ef;
+  --gl:#f4f6fb;--gy:#6b7280;--gd:#374151;
+  --rd:14px;--tr:all 0.28s ease;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;color:#1f2937;background:#fff;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-thumb{background:var(--nv);border-radius:3px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:999;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(26,46,110,0.1);padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:70px;box-shadow:0 2px 12px rgba(26,46,110,0.07)}
+.nav-logo{display:flex;align-items:center;gap:12px}
+.nav-logo img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:2.5px solid var(--gn)}
+.norg{font-size:13px;font-weight:700;color:var(--nv);display:block}
+.nsub{font-size:11px;color:var(--gn);font-weight:600}
+.nlinks{display:flex;align-items:center;gap:4px;list-style:none}
+.nlinks a{font-size:13px;font-weight:500;color:var(--gd);padding:8px 14px;border-radius:8px;transition:var(--tr)}
+.nlinks a:hover,.nlinks a.active{background:var(--nv);color:#fff}
+.ncta{background:var(--gn)!important;color:#fff!important;font-weight:700!important}
+.ncta:hover{background:var(--gn2)!important}
+.hamburger{display:none;cursor:pointer;background:none;border:none;padding:6px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--nv);margin:5px 0;border-radius:2px;transition:var(--tr)}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mob-menu{display:none;position:fixed;top:70px;left:0;right:0;background:#fff;padding:16px 6%;border-bottom:1px solid var(--gl);box-shadow:0 8px 24px rgba(26,46,110,0.1);z-index:998}
+.mob-menu.open{display:block}
+.mob-menu a{display:block;padding:11px 0;font-size:14px;font-weight:500;color:var(--gd);border-bottom:1px solid var(--gl)}
+.mob-menu a:last-child{border:none}
+
+/* PAGE HERO */
+.phero{background:linear-gradient(135deg,var(--nv2) 0%,var(--nv) 55%,#1e4d8c 100%);padding:90px 6% 70px;position:relative;overflow:hidden}
+.phero::before{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(46,139,87,0.13) 0%,transparent 70%);top:-80px;right:-60px;border-radius:50%;pointer-events:none}
+.phero-in{position:relative;z-index:1;text-align:center}
+.hbadge{display:inline-flex;align-items:center;gap:7px;background:rgba(46,139,87,0.2);border:1px solid rgba(46,139,87,0.4);color:#7ee8a2;font-size:12px;font-weight:600;padding:5px 15px;border-radius:20px;margin-bottom:20px}
+.phero h1{font-size:clamp(30px,5vw,52px);font-weight:800;color:#fff;line-height:1.15;margin-bottom:16px}
+.phero h1 span{color:#7ee8a2}
+.phero p{font-size:15px;color:rgba(255,255,255,0.72);line-height:1.8;max-width:560px;margin:0 auto}
+
+/* SECTIONS */
+section{padding:80px 6%}
+.stag{display:inline-block;background:var(--gn3);color:var(--gn);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;padding:5px 13px;border-radius:20px;margin-bottom:12px}
+.stitle{font-size:clamp(24px,3.5vw,36px);font-weight:800;color:var(--nv);margin-bottom:14px;line-height:1.2}
+.ssub{font-size:14px;color:var(--gy);line-height:1.7;max-width:560px}
+.shdr{text-align:center;margin-bottom:52px}
+.shdr .ssub{margin:0 auto}
+
+/* TEAM GRID */
+#team{background:var(--gl)}
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.tmember{background:#fff;border-radius:var(--rd);padding:24px 18px;text-align:center;box-shadow:0 3px 14px rgba(26,46,110,0.07);transition:var(--tr);border-bottom:3px solid transparent}
+.tmember:hover{transform:translateY(-5px);box-shadow:0 8px 26px rgba(26,46,110,0.13);border-bottom-color:var(--gn)}
+.tavatar{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--nv) 0%,var(--nv3) 100%);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:22px;font-weight:800;color:#fff;border:3px solid var(--gn3)}
+.tname{font-size:13px;font-weight:700;color:var(--nv);margin-bottom:5px;line-height:1.3}
+.trole{font-size:11px;color:var(--gn);font-weight:600;background:var(--gn3);padding:3px 10px;border-radius:20px;display:inline-block}
+.tnum{font-size:10px;color:var(--gy);margin-top:8px}
+
+/* TABLE */
+#teamtable{background:#fff}
+.table-wrap{overflow-x:auto;border-radius:var(--rd);box-shadow:0 3px 16px rgba(26,46,110,0.07)}
+table{width:100%;border-collapse:collapse}
+thead tr{background:var(--nv);color:#fff}
+thead th{padding:14px 18px;font-size:12px;font-weight:700;text-align:left;letter-spacing:0.5px}
+tbody tr{border-bottom:1px solid var(--gl);transition:var(--tr)}
+tbody tr:last-child{border:none}
+tbody tr:hover{background:var(--gn3)}
+tbody td{padding:13px 18px;font-size:13px;color:var(--gd)}
+.td-num{color:var(--gy);font-size:12px;font-weight:600}
+.td-name{font-weight:600;color:var(--nv)}
+.td-role{color:var(--gn);font-size:12px;font-weight:500}
+
+/* CTA */
+#cta{background:linear-gradient(135deg,var(--nv) 0%,var(--nv3) 100%);text-align:center;padding:72px 6%}
+#cta h2{font-size:clamp(22px,3.5vw,34px);font-weight:800;color:#fff;margin-bottom:14px}
+#cta p{font-size:14px;color:rgba(255,255,255,0.7);max-width:500px;margin:0 auto 32px;line-height:1.8}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.bp{background:var(--gn);color:#fff;padding:13px 28px;border-radius:10px;font-weight:700;font-size:14px;border:2px solid var(--gn);display:inline-flex;align-items:center;gap:8px;transition:var(--tr)}
+.bp:hover{background:var(--gn2);transform:translateY(-2px)}
+.bo{background:transparent;color:#fff;padding:13px 28px;border-radius:10px;font-weight:700;font-size:14px;border:2px solid rgba(255,255,255,0.38);display:inline-flex;align-items:center;gap:8px;transition:var(--tr)}
+.bo:hover{background:rgba(255,255,255,0.1);border-color:#fff;transform:translateY(-2px)}
+
+/* FOOTER */
+footer{background:#0a1428;color:rgba(255,255,255,0.6);padding:52px 6% 26px;border-top:1px solid rgba(255,255,255,0.06)}
+.ftg{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:36px;margin-bottom:44px}
+.ftb p{font-size:12px;line-height:1.7;color:rgba(255,255,255,0.45);margin:12px 0 16px}
+.ftc h4{font-size:11px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+.ftc a{display:block;font-size:12px;color:rgba(255,255,255,0.48);margin-bottom:7px;transition:var(--tr)}
+.ftc a:hover{color:#7ee8a2}
+.ftbot{border-top:1px solid rgba(255,255,255,0.07);padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.ftbot p{font-size:11px;color:rgba(255,255,255,0.32)}
+.ftbot span{color:var(--gn)}
+.srow{display:flex;gap:9px}
+.sb{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:15px;transition:var(--tr)}
+.sb.fb{background:rgba(24,119,242,0.18);color:#4a90e2}
+.sb.tw{background:rgba(29,161,242,0.18);color:#5ab9ea}
+.sb.em{background:rgba(46,139,87,0.18);color:#7ee8a2}
+.sb:hover{transform:translateY(-2px)}
+
+.fi{opacity:0;transform:translateY(28px);transition:opacity 0.65s ease,transform 0.65s ease}
+.fi.in{opacity:1;transform:translateY(0)}
+.fd1{transition-delay:0.1s}.fd2{transition-delay:0.2s}.fd3{transition-delay:0.3s}
+
+@media(max-width:900px){.ftg{grid-template-columns:1fr 1fr}.team-grid{grid-template-columns:1fr 1fr 1fr}}
+@media(max-width:768px){section{padding:60px 5%}.nlinks{display:none}.hamburger{display:block}.team-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.team-grid{grid-template-columns:1fr}.ftg{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="IMG20260507WA0036.jpg" alt="EHF Logo"/>
+    <div><span class="norg">Emmanuel Humanitarian</span><span class="nsub">Foundation • Nigeria</span></div>
+  </a>
+  <ul class="nlinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="programs.html">Programs</a></li>
+    <li><a href="team.html" class="active">Our Team</a></li>
+    <li><a href="contact.html" class="ncta">Get Involved</a></li>
+  </ul>
+  <button class="hamburger" id="hbg" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mob-menu" id="mob">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="programs.html">Programs</a>
+  <a href="team.html">Our Team</a>
+  <a href="contact.html">Get Involved</a>
+</div>
+
+<div class="phero">
+  <div class="phero-in">
+    <div class="hbadge"><i class="fas fa-users"></i> Our People</div>
+    <h1>Meet the <span>Team</span></h1>
+    <p>27 dedicated professionals and humanitarians working across Nigeria to deliver life-saving programs to vulnerable communities.</p>
+  </div>
+</div>
+
+<!-- TEAM CARDS -->
+<section id="team">
+  <div class="shdr">
+    <span class="stag">Our People</span>
+    <h2 class="stitle">EHF Team Members</h2>
+    <p class="ssub">Committed individuals serving across multiple states and thematic areas.</p>
+  </div>
+  <div class="team-grid">
+    <div class="tmember fi"><div class="tavatar">ES</div><div class="tname">Emmanuel Solomon</div><div class="trole">MEAL Officer</div></div>
+    <div class="tmember fi fd1"><div class="tavatar">AN</div><div class="tname">Anthonia Nijin Peter</div><div class="trole">Head of Volunteers</div></div>
+    <div class="tmember fi fd2"><div class="tavatar">CA</div><div class="tname">Candy Augustine</div><div class="trole">Health Officer</div></div>
+    <div class="tmember fi fd3"><div class="tavatar">CP</div><div class="tname">Chibwa Philip</div><div class="trole">Regional Director / Head of Programs</div></div>
+    <div class="tmember fi"><div class="tavatar">CE</div><div class="tname">Christiana Ejirge Reuben</div><div class="trole">Head of Operations</div></div>
+    <div class="tmember fi fd1"><div class="tavatar">DG</div><div class="tname">David Gideon Yohanna</div><div class="trole">HR Manager</div></div>
+    <div class="tmember fi fd2"><div class="tavatar">DM</div><div class="tname">David Musa Shallagwa</div><div class="trole">Field Officer</div></div>
+    <div class="tmember fi fd3"><div class="tavatar">EE</div><div class="tname">Eglah Elihu</div><div class="trole">Child Protection Officer</div></div>
+    <div class="tmember fi"><div class="tavatar">EH</div><div class="tname">Emmanuel I. Hangerior</div><div class="trole">CVA Assistant</div></div>
+    <div class="tmember fi fd1"><div class="tavatar">EA</div><div class="tname">Evans Samuel Abidoyi</div><div class="trole">Field Officer</div></div>
+    <div class="tmember fi fd2"><div class="tavatar">FL</div><div class="tname">Fadimatu Lawan Umar</div><div class="trole">Nutrition Officer</div></div>
+    <div class="tmember fi fd3"><div class="tavatar">HA</div><div class="tname">Happy Andrew</div><div class="trole">Logistics &amp; Store Officer</div></div>
+    <div class="tmember fi"><div class="tavatar">HJ</div><div class="tname">Happy Jamisel Yaduma</div><div class="trole">Procurement Officer</div></div>
+    <div class="tmember fi fd1"><div class="tavatar">HL</div><div class="tname">Henry Lamido</div><div class="trole">Community Mobiliser</div></div>
+    <div class="tmember fi fd2"><div class="tavatar">HT</div><div class="tname">Henry Tommy Yale</div><div class="trole">North Central Coordinator</div></div>
+    <div class="tmember fi fd3"><div class="tavatar">IS</div><div class="tname">Innocent Sharang</div><div class="trole">Program Manager</div></div>
+    <div class="tmember fi"><div class="tavatar">IP</div><div class="tname">Ishaya A. Pukuma</div><div class="trole">Peacebuilding Coordinator</div></div>
+    <div class="tmember fi fd1"><div class="tavatar">BN</div><div class="tname">Bitrus Ndzarwa Kwaji</div><div class="trole">GBV Specialist</div></div>
+    <div class="tmember fi fd2"><div class="tavatar">LL</div><div class="tname">Laban Leonard</div><div class="trole">Gombe Coordinator</div></div>
+    <div class="tmember fi fd3"><div class="tavatar">NS</div><div class="tname">Naomi Simon</div><div class="trole">Field Coordinator</div></div>
+    <div class="tmember fi"><div class="tavatar">NG</div><div class="tname">Nuhu Guduma</div><div class="trole">Taraba Coordinator</div></div>
+    <div class="tmember fi fd1"><div class="tavatar">PA</div><div class="tname">Paul Jacob Alhamdu</div><div class="trole">Food Security &amp; Livelihoods Officer</div></div>
+    <div class="tmember fi fd2"><div class="tavatar">SJ</div><div class="tname">Sunday Joshua Mankando</div><div class="trole">Cultural Heritage Coordinator</div></div>
+    <div class="tmember fi fd3"><div class="tavatar">JM</div><div class="tname">Jireh Mark</div><div class="trole">Grant Manager</div></div>
+    <div class="tmember fi"><div class="tavatar">CK</div><div class="tname">Charles Koji</div><div class="trole">Data Information Management Officer</div></div>
+    <div class="tmember fi fd1"><div class="tavatar">FA</div><div class="tname">Florence Angola Lamondi</div><div class="trole">Financial Officer / Accountant</div></div>
+    <div class="tmember fi fd2"><div class="tavatar">NN</div><div class="tname">Nuhu Nuhu</div><div class="trole">Compliance Officer</div></div>
+  </div>
+</section>
+
+<!-- TABLE VIEW -->
+<section id="teamtable">
+  <div class="shdr">
+    <span class="stag">Full Directory</span>
+    <h2 class="stitle">Staff List</h2>
+    <p class="ssub">Complete listing of EHF team members and their positions.</p>
+  </div>
+  <div class="table-wrap fi">
+    <table>
+      <thead>
+        <tr><th>S/N</th><th>Name</th><th>Position</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="td-num">1</td><td class="td-name">Emmanuel Solomon</td><td class="td-role">MEAL Officer</td></tr>
+        <tr><td class="td-num">2</td><td class="td-name">Anthonia Nijin Peter</td><td class="td-role">Head of Volunteers</td></tr>
+        <tr><td class="td-num">3</td><td class="td-name">Candy Augustine MPHSS</td><td class="td-role">Health Officer</td></tr>
+        <tr><td class="td-num">4</td><td class="td-name">Chibwa Philip</td><td class="td-role">Regional Director / Head of Programs</td></tr>
+        <tr><td class="td-num">5</td><td class="td-name">Christiana Ejirge Reuben</td><td class="td-role">Head of Operations</td></tr>
+        <tr><td class="td-num">6</td><td class="td-name">David Gideon Yohanna</td><td class="td-role">HR Manager</td></tr>
+        <tr><td class="td-num">7</td><td class="td-name">David Musa Shallagwa</td><td class="td-role">Field Officer</td></tr>
+        <tr><td class="td-num">8</td><td class="td-name">Eglah Elihu</td><td class="td-role">Child Protection Officer</td></tr>
+        <tr><td class="td-num">9</td><td class="td-name">Emmanuel I. Hangerior</td><td class="td-role">CVA Assistant</td></tr>
+        <tr><td class="td-num">10</td><td class="td-name">Evans Samuel Abidoyi</td><td class="td-role">Field Officer</td></tr>
+        <tr><td class="td-num">11</td><td class="td-name">Fadimatu Lawan Umar</td><td class="td-role">Nutrition Officer</td></tr>
+        <tr><td class="td-num">12</td><td class="td-name">Happy Andrew</td><td class="td-role">Logistics &amp; Store Officer</td></tr>
+        <tr><td class="td-num">13</td><td class="td-name">Happy Jamisel Yaduma</td><td class="td-role">Procurement Officer</td></tr>
+        <tr><td class="td-num">14</td><td class="td-name">Henry Lamido</td><td class="td-role">Community Mobiliser</td></tr>
+        <tr><td class="td-num">15</td><td class="td-name">Henry Tommy Yale</td><td class="td-role">North Central Coordinator</td></tr>
+        <tr><td class="td-num">16</td><td class="td-name">Innocent Sharang</td><td class="td-role">Program Manager</td></tr>
+        <tr><td class="td-num">17</td><td class="td-name">Ishaya A. Pukuma</td><td class="td-role">Peacebuilding Coordinator</td></tr>
+        <tr><td class="td-num">18</td><td class="td-name">Bitrus Ndzarwa Kwaji</td><td class="td-role">GBV Specialist</td></tr>
+        <tr><td class="td-num">19</td><td class="td-name">Laban Leonard</td><td class="td-role">Gombe Coordinator</td></tr>
+        <tr><td class="td-num">20</td><td class="td-name">Naomi Simon</td><td class="td-role">Field Coordinator</td></tr>
+        <tr><td class="td-num">21</td><td class="td-name">Nuhu Guduma</td><td class="td-role">Taraba Coordinator</td></tr>
+        <tr><td class="td-num">22</td><td class="td-name">Paul Jacob Alhamdu</td><td class="td-role">Food Security &amp; Livelihoods Officer</td></tr>
+        <tr><td class="td-num">23</td><td class="td-name">Sunday Joshua Mankando</td><td class="td-role">Cultural Heritage Coordinator</td></tr>
+        <tr><td class="td-num">24</td><td class="td-name">Jireh Mark</td><td class="td-role">Grant Manager</td></tr>
+        <tr><td class="td-num">25</td><td class="td-name">Charles Koji</td><td class="td-role">Data Information Management Officer</td></tr>
+        <tr><td class="td-num">26</td><td class="td-name">Florence Angola Lamondi</td><td class="td-role">Financial Officer / Accountant</td></tr>
+        <tr><td class="td-num">27</td><td class="td-name">Nuhu Nuhu</td><td class="td-role">Compliance (External &amp; Internal Audit)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="cta">
+  <h2 class="fi">Join Our Team</h2>
+  <p class="fi fd1">Passionate about humanitarian work? We welcome volunteers and partners committed to serving communities across Nigeria.</p>
+  <div class="cta-btns fi fd2">
+    <a href="contact.html" class="bp"><i class="fas fa-users"></i> Apply to Volunteer</a>
+    <a href="programs.html" class="bo"><i class="fas fa-th-large"></i> Our Programs</a>
+  </div>
+</section>
+
+<footer>
+  <div class="ftg">
+    <div class="ftb">
+      <div style="display:flex;align-items:center;gap:10px">
+        <img src="IMG20260507WA0036.jpg" alt="EHF Logo" style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--gn)"/>
+        <div><span class="norg" style="color:#fff">Emmanuel Humanitarian</span><span class="nsub">Foundation • Nigeria</span></div>
+      </div>
+      <p>Helping People &amp; Spreading Hope — one community at a time. EHF works to alleviate human suffering and promote sustainable development across Nigeria.</p>
+      <div class="srow">
+        <a href="https://facebook.com/emmanuelhumanitarianfoundationnigeria" target="_blank" class="sb fb"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/EHF_African" target="_blank" class="sb tw"><i class="fab fa-x-twitter"></i></a>
+        <a href="mailto:info.ehfn@gmail.com" class="sb em"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="ftc">
+      <h4>Pages</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About EHF</a>
+      <a href="programs.html">Programs</a>
+      <a href="team.html">Our Team</a>
+      <a href="contact.html">Get Involved</a>
+    </div>
+    <div class="ftc">
+      <h4>Programs</h4>
+      <a href="programs.html">Child Protection</a>
+      <a href="programs.html">Education</a>
+      <a href="programs.html">WASH</a>
+      <a href="programs.html">Health &amp; Nutrition</a>
+      <a href="programs.html">GBV Response</a>
+    </div>
+    <div class="ftc">
+      <h4>Contact</h4>
+      <a href="mailto:info.ehfn@gmail.com">info.ehfn@gmail.com</a>
+      <a href="https://twitter.com/EHF_African" target="_blank">@EHF_African</a>
+      <a href="about.html">Jimeta-Yola, Adamawa</a>
+    </div>
+  </div>
+  <div class="ftbot">
+    <p>&copy; 2025 <span>Emmanuel Humanitarian Foundation (EHF)</span>. All rights reserved.</p>
+    <p class="ft-credit">Designed by <a href="https://victorvandi.com" target="_blank" style="color:rgba(255,255,255,0.45)">victorvandi.com</a></p>
+  </div>
+</footer>
+
+<script>
+const hbg=document.getElementById('hbg'),mob=document.getElementById('mob');
+hbg.addEventListener('click',()=>{hbg.classList.toggle('open');mob.classList.toggle('open')});
+mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hbg.classList.remove('open');mob.classList.remove('open')}));
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');obs.unobserve(x.target)}})},{threshold:0.12});
+document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
