@@ -63,7 +63,8 @@ section{padding:80px 6%}
 .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .tmember{background:#fff;border-radius:var(--rd);padding:24px 18px;text-align:center;box-shadow:0 3px 14px rgba(26,46,110,0.07);transition:var(--tr);border-bottom:3px solid transparent}
 .tmember:hover{transform:translateY(-5px);box-shadow:0 8px 26px rgba(26,46,110,0.13);border-bottom-color:var(--gn)}
-.tavatar{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--nv) 0%,var(--nv3) 100%);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:22px;font-weight:800;color:#fff;border:3px solid var(--gn3)}
+.tavatar{position:relative;overflow:hidden;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--nv) 0%,var(--nv3) 100%);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:22px;font-weight:800;color:#fff;border:3px solid var(--gn3)}
+.tavatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .tname{font-size:13px;font-weight:700;color:var(--nv);margin-bottom:5px;line-height:1.3}
 .trole{font-size:11px;color:var(--gn);font-weight:600;background:var(--gn3);padding:3px 10px;border-radius:20px;display:inline-block}
 .tnum{font-size:10px;color:var(--gy);margin-top:8px}
@@ -122,7 +123,7 @@ footer{background:#0a1428;color:rgba(255,255,255,0.6);padding:52px 6% 26px;borde
 
 <nav>
   <a href="index.html" class="nav-logo">
-    <img src="IMG20260507WA0036.jpg" alt="EHF Logo"/>
+    <img src="ehf-logo.jpg" alt="EHF Logo"/>
     <div><span class="norg">Emmanuel Humanitarian</span><span class="nsub">Foundation • Nigeria</span></div>
   </a>
   <ul class="nlinks">
@@ -147,7 +148,7 @@ footer{background:#0a1428;color:rgba(255,255,255,0.6);padding:52px 6% 26px;borde
   <div class="phero-in">
     <div class="hbadge"><i class="fas fa-users"></i> Our People</div>
     <h1>Meet the <span>Team</span></h1>
-    <p>27 dedicated professionals and humanitarians working across Nigeria to deliver life-saving programs to vulnerable communities.</p>
+    <p>28 dedicated professionals and humanitarians working across Nigeria to deliver life-saving programs to vulnerable communities.</p>
   </div>
 </div>
 
@@ -159,33 +160,35 @@ footer{background:#0a1428;color:rgba(255,255,255,0.6);padding:52px 6% 26px;borde
     <p class="ssub">Committed individuals serving across multiple states and thematic areas.</p>
   </div>
   <div class="team-grid">
-    <div class="tmember fi"><div class="tavatar">ES</div><div class="tname">Emmanuel Solomon</div><div class="trole">MEAL Officer</div></div>
-    <div class="tmember fi fd1"><div class="tavatar">AN</div><div class="tname">Anthonia Nijin Peter</div><div class="trole">Head of Volunteers</div></div>
-    <div class="tmember fi fd2"><div class="tavatar">CA</div><div class="tname">Candy Augustine</div><div class="trole">Health Officer</div></div>
-    <div class="tmember fi fd3"><div class="tavatar">CP</div><div class="tname">Chibwa Philip</div><div class="trole">Regional Director / Head of Programs</div></div>
-    <div class="tmember fi"><div class="tavatar">CE</div><div class="tname">Christiana Ejirge Reuben</div><div class="trole">Head of Operations</div></div>
-    <div class="tmember fi fd1"><div class="tavatar">DG</div><div class="tname">David Gideon Yohanna</div><div class="trole">HR Manager</div></div>
+    <div class="tmember fi"><div class="tavatar"><img src="Emmanuel_Peter_Vandi_Executive_Director__1_.jpg" alt="Emmanuel Peter Vandi" loading="lazy" onerror="this.remove()"/>EV</div><div class="tname">Emmanuel Peter Vandi</div><div class="trole">Executive Director</div></div>
+    <div class="tmember fi"><div class="tavatar"><img src="Emmanuel_solomon_position_M_E__1_.jpg" alt="Emmanuel Solomon" loading="lazy" onerror="this.remove()"/>ES</div><div class="tname">Emmanuel Solomon</div><div class="trole">MEAL Officer</div></div>
+    <div class="tmember fi fd1"><div class="tavatar"><img src="Anthonia_Nijin_Peter_head_of_operations.jpg" alt="Anthonia Nijin Peter" loading="lazy" onerror="this.remove()"/>AN</div><div class="tname">Anthonia Nijin Peter</div><div class="trole">Head of Volunteers</div></div>
+    <div class="tmember fi fd2"><div class="tavatar"><img src="Candy_Augustine_position_MPHSS_Health_Officer.jpg" alt="Candy Augustine" loading="lazy" onerror="this.remove()"/>CA</div><div class="tname">Candy Augustine</div><div class="trole">Health Officer</div></div>
+    <div class="tmember fi fd3"><div class="tavatar">CP</div><div class="tname">Chibwa Philip</div><div class="trole">Organization Manager</div></div>
+</div>
+    <div class="tmember fi fd1"><div class="tavatar"><img src="David_Gideon_Yohanna_Position_HR.jpg" alt="David Gideon Yohanna" loading="lazy" onerror="this.remove()"/>DG</div><div class="tname">David Gideon Yohanna</div><div class="trole">HR Manager</div></div>
     <div class="tmember fi fd2"><div class="tavatar">DM</div><div class="tname">David Musa Shallagwa</div><div class="trole">Field Officer</div></div>
-    <div class="tmember fi fd3"><div class="tavatar">EE</div><div class="tname">Eglah Elihu</div><div class="trole">Child Protection Officer</div></div>
-    <div class="tmember fi"><div class="tavatar">EH</div><div class="tname">Emmanuel I. Hangerior</div><div class="trole">CVA Assistant</div></div>
+    <div class="tmember fi fd3"><div class="tavatar"><img src="Eglah_Elihu_Dimas_Protection_officer__1_.jpg" alt="Eglah Elihu" loading="lazy" onerror="this.remove()"/>EE</div><div class="tname">Eglah Elihu</div><div class="trole">Child Protection Officer</div></div>
+    <div class="tmember fi"><div class="tavatar"><img src="Emmanuel_I_Hangerior_position_Cash_Voucher_Assistant.jpg" alt="Emmanuel I. Hangerior" loading="lazy" onerror="this.remove()"/>EH</div><div class="tname">Emmanuel I. Hangerior</div><div class="trole">CVA Assistant</div></div>
     <div class="tmember fi fd1"><div class="tavatar">EA</div><div class="tname">Evans Samuel Abidoyi</div><div class="trole">Field Officer</div></div>
-    <div class="tmember fi fd2"><div class="tavatar">FL</div><div class="tname">Fadimatu Lawan Umar</div><div class="trole">Nutrition Officer</div></div>
+    <div class="tmember fi fd2"><div class="tavatar"><img src="Fadimatu_Lawan_Umar_position_nutrition_officer__1_.jpg" alt="Fadimatu Lawan Umar" loading="lazy" onerror="this.remove()"/>FL</div><div class="tname">Fadimatu Lawan Umar</div><div class="trole">Nutrition Officer</div></div>
     <div class="tmember fi fd3"><div class="tavatar">HA</div><div class="tname">Happy Andrew</div><div class="trole">Logistics &amp; Store Officer</div></div>
     <div class="tmember fi"><div class="tavatar">HJ</div><div class="tname">Happy Jamisel Yaduma</div><div class="trole">Procurement Officer</div></div>
-    <div class="tmember fi fd1"><div class="tavatar">HL</div><div class="tname">Henry Lamido</div><div class="trole">Community Mobiliser</div></div>
-    <div class="tmember fi fd2"><div class="tavatar">HT</div><div class="tname">Henry Tommy Yale</div><div class="trole">North Central Coordinator</div></div>
-    <div class="tmember fi fd3"><div class="tavatar">IS</div><div class="tname">Innocent Sharang</div><div class="trole">Program Manager</div></div>
-    <div class="tmember fi"><div class="tavatar">IP</div><div class="tname">Ishaya A. Pukuma</div><div class="trole">Peacebuilding Coordinator</div></div>
-    <div class="tmember fi fd1"><div class="tavatar">BN</div><div class="tname">Bitrus Ndzarwa Kwaji</div><div class="trole">GBV Specialist</div></div>
-    <div class="tmember fi fd2"><div class="tavatar">LL</div><div class="tname">Laban Leonard</div><div class="trole">Gombe Coordinator</div></div>
+    <div class="tmember fi fd1"><div class="tavatar"><img src="Henry_Lamido_position_Community_Mobilizer.jpg" alt="Henry Lamido" loading="lazy" onerror="this.remove()"/>HL</div><div class="tname">Henry Lamido</div><div class="trole">Community Mobiliser</div></div>
+    <div class="tmember fi fd2"><div class="tavatar"><img src="Henry_Tommy_Yale_North_Central_Coordinator.jpg" alt="Henry Tommy Yale" loading="lazy" onerror="this.remove()"/>HT</div><div class="tname">Henry Tommy Yale</div><div class="trole">North Central Coordinator</div></div>
+    <div class="tmember fi fd3"><div class="tavatar"><img src="Innocent_sharang_position_program_Manager.jpg" alt="Innocent Sharang" loading="lazy" onerror="this.remove()"/>IS</div><div class="tname">Innocent Sharang</div><div class="trole">Program Manager</div></div>
+    <div class="tmember fi"><div class="tavatar"><img src="Ishaya_A__Pukuma_position_Peacebuiding_Roving_coordinator.jpg" alt="Ishaya A. Pukuma" loading="lazy" onerror="this.remove()"/>IP</div><div class="tname">Ishaya A. Pukuma</div><div class="trole">Peacebuilding Coordinator</div></div>
+    <div class="tmember fi fd1"><div class="tavatar"><img src="Bitrus_ndzarwa_kwaji_Nasarawa_Coordinator.jpg" alt="Bitrus Ndzarwa Kwaji" loading="lazy" onerror="this.remove()"/>BN</div><div class="tname">Bitrus Ndzarwa Kwaji</div><div class="trole">GBV Specialist</div></div>
+    <div class="tmember fi fd2"><div class="tavatar"><img src="Laban_Leonard_Gombe_coordinator.jpg" alt="Laban Leonard" loading="lazy" onerror="this.remove()"/>LL</div><div class="tname">Laban Leonard</div><div class="trole">Gombe Coordinator</div></div>
     <div class="tmember fi fd3"><div class="tavatar">NS</div><div class="tname">Naomi Simon</div><div class="trole">Field Coordinator</div></div>
-    <div class="tmember fi"><div class="tavatar">NG</div><div class="tname">Nuhu Guduma</div><div class="trole">Taraba Coordinator</div></div>
-    <div class="tmember fi fd1"><div class="tavatar">PA</div><div class="tname">Paul Jacob Alhamdu</div><div class="trole">Food Security &amp; Livelihoods Officer</div></div>
-    <div class="tmember fi fd2"><div class="tavatar">SJ</div><div class="tname">Sunday Joshua Mankando</div><div class="trole">Cultural Heritage Coordinator</div></div>
-    <div class="tmember fi fd3"><div class="tavatar">JM</div><div class="tname">Jireh Mark</div><div class="trole">Grant Manager</div></div>
-    <div class="tmember fi"><div class="tavatar">CK</div><div class="tname">Charles Koji</div><div class="trole">Data Information Management Officer</div></div>
-    <div class="tmember fi fd1"><div class="tavatar">FA</div><div class="tname">Florence Angola Lamondi</div><div class="trole">Financial Officer / Accountant</div></div>
-    <div class="tmember fi fd2"><div class="tavatar">NN</div><div class="tname">Nuhu Nuhu</div><div class="trole">Compliance Officer</div></div>
+    <div class="tmember fi"><div class="tavatar"><img src="Nuhu_Gunduma_Taraba_coordinator.jpg" alt="Nuhu Guduma" loading="lazy" onerror="this.remove()"/>NG</div><div class="tname">Nuhu Guduma</div><div class="trole">Taraba Coordinator</div></div>
+    <div class="tmember fi fd1"><div class="tavatar"><img src="Jacob_Paul_Alhamdu_Food_security__livelihoods_and_climate_resilient_officer.jpg" alt="Paul Jacob Alhamdu" loading="lazy" onerror="this.remove()"/>PA</div><div class="tname">Paul Jacob Alhamdu</div><div class="trole">Food Security &amp; Livelihoods Officer</div></div>
+    <div class="tmember fi fd2"><div class="tavatar"><img src="Sunday_Joshua_mankando_Cultural_heritage_coordinator_position.jpg" alt="Sunday Joshua Mankando" loading="lazy" onerror="this.remove()"/>SJ</div><div class="tname">Sunday Joshua Mankando</div><div class="trole">Cultural Heritage Coordinator</div></div>
+    <div class="tmember fi fd3"><div class="tavatar"><img src="Jireh_Mark_Grant_Manager.jpg" alt="Jireh Mark" loading="lazy" onerror="this.remove()"/>JM</div><div class="tname">Jireh Mark</div><div class="trole">Grant Manager</div></div>
+    <div class="tmember fi"><div class="tavatar"><img src="Charles_Koji_Position_Data_information_management_officer.jpg" alt="Charles Koji" loading="lazy" onerror="this.remove()"/>CK</div><div class="tname">Charles Koji</div><div class="trole">Data Information Management Officer</div></div>
+    <div class="tmember fi fd1"><div class="tavatar"><img src="Florence_Angola_lamondi_position_Finance_officer.jpg" alt="Florence Angola Lamondi" loading="lazy" onerror="this.remove()"/>FA</div><div class="tname">Florence Angola Lamondi</div><div class="trole">Financial Officer / Accountant</div></div>
+    <div class="tmember fi fd2"><div class="tavatar">NB</div><div class="tname">Nuhu Bakari</div><div class="trole">Compliance Officer</div></div>
+    <div class="tmember fi fd3"><div class="tavatar"><img src="Shinjawa_Danladi_Wash_coordinator.jpg" alt="Shinjawa Danladi" loading="lazy" onerror="this.remove()"/>SD</div><div class="tname">Shinjawa Danladi</div><div class="trole">WASH Coordinator</div></div>
   </div>
 </section>
 
@@ -202,11 +205,11 @@ footer{background:#0a1428;color:rgba(255,255,255,0.6);padding:52px 6% 26px;borde
         <tr><th>S/N</th><th>Name</th><th>Position</th></tr>
       </thead>
       <tbody>
-        <tr><td class="td-num">1</td><td class="td-name">Emmanuel Solomon</td><td class="td-role">MEAL Officer</td></tr>
-        <tr><td class="td-num">2</td><td class="td-name">Anthonia Nijin Peter</td><td class="td-role">Head of Volunteers</td></tr>
-        <tr><td class="td-num">3</td><td class="td-name">Candy Augustine MPHSS</td><td class="td-role">Health Officer</td></tr>
-        <tr><td class="td-num">4</td><td class="td-name">Chibwa Philip</td><td class="td-role">Regional Director / Head of Programs</td></tr>
-        <tr><td class="td-num">5</td><td class="td-name">Christiana Ejirge Reuben</td><td class="td-role">Head of Operations</td></tr>
+        <tr><td class="td-num">1</td><td class="td-name">Emmanuel Peter Vandi</td><td class="td-role">Executive Director</td></tr>
+        <tr><td class="td-num">2</td><td class="td-name">Emmanuel Solomon</td><td class="td-role">MEAL Officer</td></tr>
+        <tr><td class="td-num">3</td><td class="td-name">Anthonia Nijin Peter</td><td class="td-role">Head of Volunteers</td></tr>
+        <tr><td class="td-num">4</td><td class="td-name">Candy Augustine MPHSS</td><td class="td-role">Health Officer</td></tr>
+        <tr><td class="td-num">5</td><td class="td-name">Chibwa Philip</td><td class="td-role">Organization Manager</td></tr>
         <tr><td class="td-num">6</td><td class="td-name">David Gideon Yohanna</td><td class="td-role">HR Manager</td></tr>
         <tr><td class="td-num">7</td><td class="td-name">David Musa Shallagwa</td><td class="td-role">Field Officer</td></tr>
         <tr><td class="td-num">8</td><td class="td-name">Eglah Elihu</td><td class="td-role">Child Protection Officer</td></tr>
@@ -228,7 +231,8 @@ footer{background:#0a1428;color:rgba(255,255,255,0.6);padding:52px 6% 26px;borde
         <tr><td class="td-num">24</td><td class="td-name">Jireh Mark</td><td class="td-role">Grant Manager</td></tr>
         <tr><td class="td-num">25</td><td class="td-name">Charles Koji</td><td class="td-role">Data Information Management Officer</td></tr>
         <tr><td class="td-num">26</td><td class="td-name">Florence Angola Lamondi</td><td class="td-role">Financial Officer / Accountant</td></tr>
-        <tr><td class="td-num">27</td><td class="td-name">Nuhu Nuhu</td><td class="td-role">Compliance (External &amp; Internal Audit)</td></tr>
+        <tr><td class="td-num">27</td><td class="td-name">Nuhu Bakari</td><td class="td-role">Compliance (External &amp; Internal Audit)</td></tr>
+        <tr><td class="td-num">28</td><td class="td-name">Shinjawa Danladi</td><td class="td-role">WASH Coordinator</td></tr>
       </tbody>
     </table>
   </div>
@@ -247,7 +251,7 @@ footer{background:#0a1428;color:rgba(255,255,255,0.6);padding:52px 6% 26px;borde
   <div class="ftg">
     <div class="ftb">
       <div style="display:flex;align-items:center;gap:10px">
-        <img src="IMG20260507WA0036.jpg" alt="EHF Logo" style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--gn)"/>
+        <img src="ehf-logo.jpg" alt="EHF Logo" style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--gn)"/>
         <div><span class="norg" style="color:#fff">Emmanuel Humanitarian</span><span class="nsub">Foundation • Nigeria</span></div>
       </div>
       <p>Helping People &amp; Spreading Hope — one community at a time. EHF works to alleviate human suffering and promote sustainable development across Nigeria.</p>
@@ -282,7 +286,6 @@ footer{background:#0a1428;color:rgba(255,255,255,0.6);padding:52px 6% 26px;borde
   </div>
   <div class="ftbot">
     <p>&copy; 2025 <span>Emmanuel Humanitarian Foundation (EHF)</span>. All rights reserved.</p>
-    <p class="ft-credit">Designed by <a href="https://victorvandi.com" target="_blank" style="color:rgba(255,255,255,0.45)">victorvandi.com</a></p>
   </div>
 </footer>
 
