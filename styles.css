@@ -649,3 +649,58 @@ body.page-contact .fd1{transition-delay:0.1s}body.page-contact .fd2{transition-d
 @media(max-width:900px){body.page-contact .ftg{grid-template-columns:1fr 1fr}body.page-contact .cgrid{grid-template-columns:1fr}body.page-contact .igrid{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){body.page-contact section{padding:60px 5%}body.page-contact .nlinks{display:none}body.page-contact .hamburger{display:block}}
 @media(max-width:480px){body.page-contact .igrid{grid-template-columns:1fr}body.page-contact .ftg{grid-template-columns:1fr}}
+
+
+/* DONATION BANK DETAILS */
+body.page-home .bank-details,
+body.page-contact .bank-details{
+  background:rgba(255,255,255,0.9);
+  border:1px solid rgba(26,46,110,0.1);
+  border-radius:12px;
+  padding:14px;
+  margin:0 0 20px;
+  text-align:left;
+  box-shadow:0 3px 14px rgba(26,46,110,0.06);
+}
+body.page-contact .bank-details{background:var(--gl)}
+body.page-home .bank-title,
+body.page-contact .bank-title{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:12px;
+  font-weight:800;
+  color:var(--nv);
+  margin-bottom:10px;
+}
+body.page-home .bank-title i,
+body.page-contact .bank-title i{color:var(--gn)}
+body.page-home .bank-row,
+body.page-contact .bank-row{
+  display:flex;
+  justify-content:space-between;
+  gap:14px;
+  padding:8px 0;
+  border-top:1px solid rgba(26,46,110,0.08);
+}
+body.page-home .bank-row span,
+body.page-contact .bank-row span{
+  font-size:11px;
+  font-weight:700;
+  color:var(--gy);
+  white-space:nowrap;
+}
+body.page-home .bank-row strong,
+body.page-contact .bank-row strong{
+  font-size:12px;
+  font-weight:800;
+  color:var(--nv);
+  text-align:right;
+  word-break:break-word;
+}
+@media(max-width:480px){
+  body.page-home .bank-row,
+  body.page-contact .bank-row{display:block}
+  body.page-home .bank-row strong,
+  body.page-contact .bank-row strong{display:block;text-align:left;margin-top:3px}
+}
