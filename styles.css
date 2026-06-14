@@ -399,18 +399,20 @@ body.page-programs .fd1{transition-delay:0.1s}body.page-programs .fd2{transition
 @media(max-width:480px){body.page-programs .prog-grid{grid-template-columns:1fr}body.page-programs .ftg{grid-template-columns:1fr}}
 
 /* PROGRAM POSTER GALLERY */
-body.page-programs .poster-gallery{column-count:3;column-gap:18px}
-@media(max-width:900px){body.page-programs .poster-gallery{column-count:2}}
-@media(max-width:560px){body.page-programs .poster-gallery{column-count:1}}
-body.page-programs .poster-gallery.hl{column-count:2;max-width:760px;margin:0 auto}
-@media(max-width:560px){body.page-programs .poster-gallery.hl{column-count:1}}
-body.page-programs .poster{break-inside:avoid;display:block;margin:0 0 18px;border-radius:var(--rd);overflow:hidden;box-shadow:0 4px 16px rgba(26,46,110,0.1);background:#fff;cursor:zoom-in;transition:var(--tr)}
+body.page-programs .poster-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;max-width:1120px;margin:0 auto}
+body.page-programs .poster-gallery.hl{grid-template-columns:repeat(2,minmax(0,1fr));max-width:760px;margin:0 auto}
+@media(max-width:900px){body.page-programs .poster-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){body.page-programs .poster-gallery,body.page-programs .poster-gallery.hl{grid-template-columns:1fr;gap:18px}}
+body.page-programs .poster{position:relative;display:block;margin:0;border-radius:var(--rd);overflow:hidden;box-shadow:0 4px 16px rgba(26,46,110,0.1);background:#fff;cursor:zoom-in;transition:var(--tr);border:1px solid rgba(26,46,110,0.07)}
 body.page-programs .poster:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(26,46,110,0.16)}
-body.page-programs .poster img{width:100%;display:block}
-body.page-programs .poster-ph{cursor:default;aspect-ratio:3/4;background:linear-gradient(150deg,var(--nv) 0%,var(--nv3) 60%,var(--gn) 150%);display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:24px}
+body.page-programs .poster img{width:100%;aspect-ratio:9/16;object-fit:contain;display:block;background:#fff}
+body.page-programs .day-badge,body.page-programs .day-label{display:inline-flex;align-items:center;justify-content:center;background:var(--gn);color:#fff;font-size:12px;font-weight:800;letter-spacing:.4px;border-radius:999px;padding:7px 12px;box-shadow:0 8px 18px rgba(46,139,87,0.25)}
+body.page-programs .day-badge{position:absolute;top:12px;left:12px;z-index:2}
+body.page-programs .poster-ph{cursor:default;aspect-ratio:9/16;background:linear-gradient(150deg,var(--nv) 0%,var(--nv3) 60%,var(--gn) 150%);display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:24px;min-height:360px}
 body.page-programs .poster-ph:hover{transform:none;box-shadow:0 4px 16px rgba(26,46,110,0.1)}
-body.page-programs .ph-in i{font-size:46px;color:#7ee8a2;margin-bottom:14px}
-body.page-programs .ph-in h3{font-size:20px;font-weight:700;margin-bottom:8px}
+body.page-programs .ph-in{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
+body.page-programs .ph-in i{font-size:46px;color:#7ee8a2;margin-bottom:2px}
+body.page-programs .ph-in h3{font-size:22px;font-weight:800;margin-bottom:0;color:#fff}
 body.page-programs .ph-in p{font-size:11px;color:rgba(255,255,255,0.72);text-transform:uppercase;letter-spacing:1.5px}
 body.page-programs #highlights{background:#fff}
 body.page-programs .lb{display:none;position:fixed;inset:0;z-index:9999;background:rgba(10,20,40,0.93);align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
@@ -1006,3 +1008,19 @@ body.donation-popup-active{overflow:hidden}
 .donation-popup-secondary{background:#f3f4f6;color:#374151;font-weight:500}
 .donation-popup-secondary:hover{background:#e9ecef;color:var(--nv)}
 @media(max-width:420px){.donation-popup-overlay{padding:14px}.donation-popup-card{padding:30px 22px 24px}.donation-popup-logo{width:52px;height:52px}.donation-popup-actions{gap:12px}.donation-popup-primary,.donation-popup-secondary{min-height:44px;font-size:13px}}
+/* EHF LOCATION SECTION UPDATE */
+body.page-contact .location-card{padding:34px 28px}
+body.page-contact .location-card .addr{margin-bottom:16px}
+body.page-contact .map-btn{position:relative;z-index:1;display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--gn);color:#fff;border-radius:10px;padding:12px 18px;font-size:13px;font-weight:800;box-shadow:0 10px 26px rgba(46,139,87,.22);transition:var(--tr);margin:0 0 18px}
+body.page-contact .map-btn:hover{background:var(--gn2);transform:translateY(-2px)}
+body.page-contact .responsive-map{position:relative;z-index:1;width:100%;height:0;padding-bottom:62%;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.18);box-shadow:0 14px 34px rgba(0,0,0,.16);background:rgba(255,255,255,.08);margin:2px 0 20px}
+body.page-contact .responsive-map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+body.page-contact .location-card .map-block{margin-top:0}
+.footer-location{margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.08)}
+.footer-location-label{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:.7px;margin-bottom:8px}
+.footer-location-label i{color:#7ee8a2;font-size:12px}
+.footer-location p{font-size:12px;line-height:1.7;color:rgba(255,255,255,.52);margin:0 0 10px}
+.footer-map-link{display:inline-flex!important;width:auto;align-items:center;justify-content:center;background:rgba(46,139,87,.18);border:1px solid rgba(126,232,162,.28);color:#7ee8a2!important;border-radius:9px;padding:9px 12px;font-size:11px!important;font-weight:800!important;margin-top:2px;transition:var(--tr)}
+.footer-map-link:hover{background:rgba(46,139,87,.28);transform:translateY(-1px);text-decoration:none!important}
+@media(max-width:900px){body.page-contact .responsive-map{padding-bottom:56%}}
+@media(max-width:520px){body.page-contact .location-card{padding:28px 20px}body.page-contact .map-btn{width:100%;font-size:12px;padding:12px 14px}body.page-contact .responsive-map{padding-bottom:72%;border-radius:13px}.footer-map-link{width:100%}}
