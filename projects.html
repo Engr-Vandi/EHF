@@ -27,7 +27,7 @@
 <meta name="twitter:image" content="https://ehfng.org/og-image.jpg"/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-<link rel="stylesheet" href="./styles.css?v=projects-responsive-fix-20260614"/>
+<link rel="stylesheet" href="./styles.css?v=projects-slider-frame-20260614"/>
 <style>
 /* Inline safeguard for projects page layout */
 body.page-projects,
@@ -158,6 +158,24 @@ body.page-projects .fi{opacity:1;transform:none}
   body.page-projects .ftg{grid-template-columns:1fr;gap:26px}
 }
 
+
+/* Fixed-frame project image sliders */
+body.page-projects .project-gallery{display:flex;align-items:stretch;justify-content:center;padding:14px;background:#eef6f0;min-width:0}
+body.page-projects .project-slider{position:relative;width:100%;height:100%;min-height:520px;border-radius:16px;overflow:hidden;background:#f4f8f5;border:1px solid rgba(26,46,110,.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,.55)}
+body.page-projects .project-slide-frame{position:relative;width:100%;height:100%;min-height:520px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#f7faf8 0%,#e9f4ee 100%)}
+body.page-projects .project-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transform:scale(1.015);transition:opacity .65s ease,transform .65s ease;pointer-events:none;padding:8px}
+body.page-projects .project-slide.active{opacity:1;transform:scale(1);pointer-events:auto}
+body.page-projects .project-slide-btn{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border:0;border-radius:50%;background:rgba(10,20,40,.68);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:4;transition:var(--tr);box-shadow:0 6px 18px rgba(10,20,40,.18)}
+body.page-projects .project-slide-btn:hover{background:var(--gn);transform:translateY(-50%) scale(1.05)}
+body.page-projects .project-slide-prev{left:14px}
+body.page-projects .project-slide-next{right:14px}
+body.page-projects .project-slide-dots{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);display:flex;gap:8px;z-index:5;background:rgba(10,20,40,.45);padding:7px 10px;border-radius:999px;backdrop-filter:blur(8px)}
+body.page-projects .project-slide-dots button{width:9px;height:9px;border:0;border-radius:50%;background:rgba(255,255,255,.55);cursor:pointer;padding:0;transition:var(--tr)}
+body.page-projects .project-slide-dots button.active{width:24px;border-radius:999px;background:#fff}
+@media(max-width:1024px){body.page-projects .project-slider,body.page-projects .project-slide-frame{min-height:440px}}
+@media(max-width:768px){body.page-projects .project-gallery{padding:10px}body.page-projects .project-slider,body.page-projects .project-slide-frame{min-height:360px}body.page-projects .project-slide-btn{width:38px;height:38px}body.page-projects .project-slide-prev{left:10px}body.page-projects .project-slide-next{right:10px}}
+@media(max-width:560px){body.page-projects .project-slider,body.page-projects .project-slide-frame{min-height:320px;border-radius:13px}body.page-projects .project-slide{padding:6px}body.page-projects .project-slide-btn{width:34px;height:34px;font-size:12px}body.page-projects .project-slide-dots{bottom:12px}}
+
 </style>
 </head>
 <body class="page-projects">
@@ -205,12 +223,19 @@ body.page-projects .fi{opacity:1;transform:none}
   <div class="project-grid">
     <article class="project-card project-featured fi">
       <div class="project-gallery">
-        <figure class="project-main-photo">
-          <img src="project-climate-seedlings-1.jpg" alt="EHF team with olive seedlings in Mijilu Community, Adamawa State" loading="lazy"/>
-        </figure>
-        <div class="project-thumbs" aria-label="Project photo gallery">
-          <img src="project-climate-seedlings-2.jpg" alt="EHF climate change awareness and tree planting sensitization session" loading="lazy"/>
-          <img src="project-climate-seedlings-3.jpg" alt="EHF distributing olive seedlings to community members" loading="lazy"/>
+        <div class="project-slider" data-slider aria-label="Climate Change Mitigation project photos">
+          <div class="project-slide-frame">
+            <img class="project-slide active" src="project-climate-seedlings-1.jpg" alt="EHF team with olive seedlings in Mijilu Community, Adamawa State" loading="lazy"/>
+            <img class="project-slide" src="project-climate-seedlings-2.jpg" alt="EHF climate change awareness and tree planting sensitization session" loading="lazy"/>
+            <img class="project-slide" src="project-climate-seedlings-3.jpg" alt="EHF distributing olive seedlings to community members" loading="lazy"/>
+          </div>
+          <button class="project-slide-btn project-slide-prev" type="button" data-slide-prev aria-label="Previous photo"><i class="fas fa-chevron-left"></i></button>
+          <button class="project-slide-btn project-slide-next" type="button" data-slide-next aria-label="Next photo"><i class="fas fa-chevron-right"></i></button>
+          <div class="project-slide-dots" aria-label="Project photo controls">
+            <button class="active" type="button" data-slide-dot="0" aria-label="Show photo 1"></button>
+            <button type="button" data-slide-dot="1" aria-label="Show photo 2"></button>
+            <button type="button" data-slide-dot="2" aria-label="Show photo 3"></button>
+          </div>
         </div>
       </div>
       <div class="project-body">
@@ -233,12 +258,19 @@ body.page-projects .fi{opacity:1;transform:none}
 
     <article class="project-card project-featured fi fd1">
       <div class="project-gallery">
-        <figure class="project-main-photo">
-          <img src="project-menstrual-hygiene-1.jpg" alt="EHF menstrual hygiene awareness and sanitary pad distribution in Pariye Community" loading="lazy"/>
-        </figure>
-        <div class="project-thumbs" aria-label="Project photo gallery">
-          <img src="project-menstrual-hygiene-2.jpg" alt="EHF educational support group photo with adolescent girls and young women" loading="lazy"/>
-          <img src="project-menstrual-hygiene-3.jpg" alt="EHF team conducting menstrual hygiene education session" loading="lazy"/>
+        <div class="project-slider" data-slider aria-label="Menstrual Hygiene Awareness project photos">
+          <div class="project-slide-frame">
+            <img class="project-slide active" src="project-menstrual-hygiene-1.jpg" alt="EHF menstrual hygiene awareness and sanitary pad distribution in Pariye Community" loading="lazy"/>
+            <img class="project-slide" src="project-menstrual-hygiene-2.jpg" alt="EHF educational support group photo with adolescent girls and young women" loading="lazy"/>
+            <img class="project-slide" src="project-menstrual-hygiene-3.jpg" alt="EHF team conducting menstrual hygiene education session" loading="lazy"/>
+          </div>
+          <button class="project-slide-btn project-slide-prev" type="button" data-slide-prev aria-label="Previous photo"><i class="fas fa-chevron-left"></i></button>
+          <button class="project-slide-btn project-slide-next" type="button" data-slide-next aria-label="Next photo"><i class="fas fa-chevron-right"></i></button>
+          <div class="project-slide-dots" aria-label="Project photo controls">
+            <button class="active" type="button" data-slide-dot="0" aria-label="Show photo 1"></button>
+            <button type="button" data-slide-dot="1" aria-label="Show photo 2"></button>
+            <button type="button" data-slide-dot="2" aria-label="Show photo 3"></button>
+          </div>
         </div>
       </div>
       <div class="project-body">
@@ -262,12 +294,19 @@ body.page-projects .fi{opacity:1;transform:none}
 
     <article class="project-card project-featured fi fd2">
       <div class="project-gallery">
-        <figure class="project-main-photo">
-          <img src="project-peacebuilding-1.jpg" alt="EHF documenting community experiences during a peacebuilding visit in Anguwan Rukuba, Plateau State" loading="lazy"/>
-        </figure>
-        <div class="project-thumbs" aria-label="Project photo gallery">
-          <img src="project-peacebuilding-2.jpg" alt="EHF peacebuilding advocacy session with community leaders in Jos North, Plateau State" loading="lazy"/>
-          <img src="project-peacebuilding-3.jpg" alt="EHF peacebuilding team during humanitarian visit to Anguwan Rukuba" loading="lazy"/>
+        <div class="project-slider" data-slider aria-label="Humanitarian and Peacebuilding project photos">
+          <div class="project-slide-frame">
+            <img class="project-slide active" src="project-peacebuilding-1.jpg" alt="EHF documenting community experiences during a peacebuilding visit in Anguwan Rukuba, Plateau State" loading="lazy"/>
+            <img class="project-slide" src="project-peacebuilding-2.jpg" alt="EHF peacebuilding advocacy session with community leaders in Jos North, Plateau State" loading="lazy"/>
+            <img class="project-slide" src="project-peacebuilding-3.jpg" alt="EHF peacebuilding team during humanitarian visit to Anguwan Rukuba" loading="lazy"/>
+          </div>
+          <button class="project-slide-btn project-slide-prev" type="button" data-slide-prev aria-label="Previous photo"><i class="fas fa-chevron-left"></i></button>
+          <button class="project-slide-btn project-slide-next" type="button" data-slide-next aria-label="Next photo"><i class="fas fa-chevron-right"></i></button>
+          <div class="project-slide-dots" aria-label="Project photo controls">
+            <button class="active" type="button" data-slide-dot="0" aria-label="Show photo 1"></button>
+            <button type="button" data-slide-dot="1" aria-label="Show photo 2"></button>
+            <button type="button" data-slide-dot="2" aria-label="Show photo 3"></button>
+          </div>
         </div>
       </div>
       <div class="project-body">
@@ -349,6 +388,33 @@ hbg.addEventListener('click',()=>{hbg.classList.toggle('open');mob.classList.tog
 mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hbg.classList.remove('open');mob.classList.remove('open')}));
 const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');obs.unobserve(x.target)}})},{threshold:0.12});
 document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
+
+document.querySelectorAll('[data-slider]').forEach((slider, sliderIndex)=>{
+  const slides=[...slider.querySelectorAll('.project-slide')];
+  const dots=[...slider.querySelectorAll('[data-slide-dot]')];
+  const prev=slider.querySelector('[data-slide-prev]');
+  const next=slider.querySelector('[data-slide-next]');
+  let index=0;
+  let timer;
+  const show=(target)=>{
+    index=(target+slides.length)%slides.length;
+    slides.forEach((slide,i)=>slide.classList.toggle('active',i===index));
+    dots.forEach((dot,i)=>dot.classList.toggle('active',i===index));
+  };
+  const start=()=>{
+    stop();
+    timer=setInterval(()=>show(index+1), 4200 + (sliderIndex*500));
+  };
+  const stop=()=>clearInterval(timer);
+  prev.addEventListener('click',()=>{show(index-1);start();});
+  next.addEventListener('click',()=>{show(index+1);start();});
+  dots.forEach((dot)=>dot.addEventListener('click',()=>{show(Number(dot.dataset.slideDot));start();}));
+  slider.addEventListener('mouseenter',stop);
+  slider.addEventListener('mouseleave',start);
+  slider.addEventListener('focusin',stop);
+  slider.addEventListener('focusout',start);
+  start();
+});
 </script>
 </body>
 </html>
