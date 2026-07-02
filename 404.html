@@ -1,39 +1,169 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Page Not Found | Gia Bridals</title>
-<meta name="robots" content="noindex"/>
-<link rel="icon" href="/favicon.ico" sizes="48x48"/>
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
-<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
-<meta name="theme-color" content="#0D0D0D"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="/styles.css"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Page Not Found — Emmanuel Humanitarian Foundation (EHF)</title>
+<meta content="The requested Emmanuel Humanitarian Foundation page could not be found. Return home or explore EHF events, campaigns, projects, team, and contact information." name="description"/>
+<meta content="Emmanuel Humanitarian Foundation (EHF)" name="author"/>
+<meta content="noindex, follow" name="robots"/>
+<meta content="#1a2e6e" name="theme-color"/>
+<link href="ehf-logo.jpg" rel="icon" type="image/jpeg"/>
+<meta content="website" property="og:type"/>
+<meta content="Emmanuel Humanitarian Foundation (EHF)" property="og:site_name"/>
+<meta content="en_NG" property="og:locale"/>
+<meta content="Page Not Found — Emmanuel Humanitarian Foundation (EHF)" property="og:title"/>
+<meta content="The requested Emmanuel Humanitarian Foundation page could not be found. Use the links provided to continue exploring EHF." property="og:description"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@EHF_African" name="twitter:site"/>
+<meta content="Page Not Found — Emmanuel Humanitarian Foundation (EHF)" name="twitter:title"/>
+<meta content="The requested Emmanuel Humanitarian Foundation page could not be found. Use the links provided to continue exploring EHF." name="twitter:description"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="styles.css?v=events-campaigns-1" rel="stylesheet"/>
 <style>
-  .nf{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:var(--off-white);padding:40px 24px}
-  .nf-logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;letter-spacing:.06em;color:var(--black);margin-bottom:40px}
-  .nf-logo .dot{color:var(--gold)}
-  .nf-code{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(4rem,12vw,7rem);line-height:1;color:var(--gold);margin-bottom:10px}
-  .nf-h{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(1.6rem,4vw,2.4rem);color:var(--black);margin-bottom:16px}
-  .nf-h em{font-style:italic}
-  .nf-p{font-family:'Raleway',sans-serif;font-weight:300;font-size:.92rem;line-height:1.9;color:var(--gray);max-width:440px;margin:0 auto 34px}
-  .nf-btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+body.page-about .not-found{background:linear-gradient(180deg,#fff 0%,var(--gl) 100%);padding:80px 6%}
+body.page-about .not-found-card{max-width:880px;margin:0 auto;background:#fff;border-radius:22px;padding:48px 36px;text-align:center;box-shadow:0 10px 34px rgba(26,46,110,0.11);border:1px solid rgba(26,46,110,0.08)}
+body.page-about .error-code{display:inline-flex;align-items:center;justify-content:center;width:96px;height:96px;border-radius:50%;background:var(--gn3);color:var(--gn);font-size:30px;font-weight:800;margin-bottom:22px;border:3px solid rgba(46,139,87,0.18)}
+body.page-about .not-found-card h2{font-size:clamp(26px,4vw,40px);font-weight:800;color:var(--nv);line-height:1.2;margin-bottom:14px}
+body.page-about .not-found-card p{font-size:15px;color:var(--gy);line-height:1.8;max-width:640px;margin:0 auto 28px}
+body.page-about .quick-links{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
+body.page-about .quick-link{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 16px;border-radius:12px;font-size:14px;font-weight:700;transition:var(--tr);border:2px solid rgba(26,46,110,0.1);color:var(--nv);background:#fff}
+body.page-about .quick-link.primary{background:var(--gn);border-color:var(--gn);color:#fff}
+body.page-about .quick-link:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(26,46,110,0.12);border-color:var(--nv)}
+body.page-about .quick-link.primary:hover{background:var(--gn2);border-color:var(--gn2);box-shadow:0 8px 22px rgba(46,139,87,0.28)}
+@media(max-width:768px){body.page-about .not-found{padding:60px 5%}body.page-about .not-found-card{padding:38px 22px}body.page-about .quick-links{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){body.page-about .error-code{width:82px;height:82px;font-size:26px}body.page-about .quick-links{grid-template-columns:1fr}body.page-about .quick-link{width:100%}}
 </style>
-</head>
-<body class="subpage">
-<div class="nf">
-  <div class="nf-logo">Gia<span class="dot">·</span>Bridals</div>
-  <div class="nf-code">404</div>
-  <h1 class="nf-h">This page seems to have <em>slipped away</em></h1>
-  <p class="nf-p">The page you're looking for doesn't exist or has been moved. Let's get you back to the gowns.</p>
-  <div class="nf-btns">
-    <a href="/" class="btn-blk">Back to Home</a>
-    <a href="/collections.html" class="btn-ghost">View the Collection</a>
-  </div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "name": "Emmanuel Humanitarian Foundation",
+  "alternateName": "EHF",
+  "url": "https://ehfng.org",
+  "logo": "https://ehfng.org/ehf-logo.jpg",
+  "image": "https://ehfng.org/og-image.jpg",
+  "description": "Emmanuel Humanitarian Foundation (EHF) is a registered Nigerian nonprofit delivering humanitarian aid, sustainable development, and human rights advocacy to vulnerable and crisis-affected communities across Nigeria.",
+  "email": "info.ehfn@gmail.com",
+  "slogan": "Helping People & Spreading Hope",
+  "areaServed": "NG",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No. 3 Sabru House, Atiku Abubakar Way, Jimeta",
+    "addressLocality": "Yola",
+    "addressRegion": "Adamawa State",
+    "addressCountry": "NG"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "info.ehfn@gmail.com",
+    "contactType": "General inquiries",
+    "areaServed": "NG",
+    "availableLanguage": [
+      "English"
+    ]
+  },
+  "sameAs": [
+    "https://facebook.com/emmanuelhumanitarianfoundationnigeria",
+    "https://twitter.com/EHF_African"
+  ]
+}
+</script></head>
+<body class="page-about">
+<nav>
+<a class="nav-logo" href="./">
+<img alt="EHF Logo" src="ehf-logo.jpg"/>
+<div><span class="norg">Emmanuel Humanitarian</span><span class="nsub">Foundation • Nigeria</span></div>
+</a>
+<ul class="nlinks">
+<li><a href="./">Home</a></li>
+<li><a href="about">About</a></li>
+<li><a href="projects">Projects</a></li>
+<li><a href="team">Our Team</a></li>
+<li><a class="ncta" href="contact">Get Involved</a></li>
+</ul>
+<button aria-label="Menu" class="hamburger" id="hbg"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob-menu" id="mob">
+<a href="./">Home</a>
+<a href="about">About</a>
+<a href="projects">Projects</a>
+<a href="team">Our Team</a>
+<a href="contact">Get Involved</a>
 </div>
+<div class="phero">
+<div class="phero-in">
+<div class="hbadge"><i class="fas fa-compass"></i> Page Not Found</div>
+<h1>We Couldn’t Find <span>That Page</span></h1>
+<p>The page you requested may have moved, been renamed, or is temporarily unavailable.</p>
+</div>
+</div>
+<main class="not-found">
+<div class="not-found-card fi">
+<div class="error-code">404</div>
+<h2>The requested page was not found.</h2>
+<p>Thank you for your patience. Emmanuel Humanitarian Foundation remains committed to helping people and spreading hope. Please use one of the links below to continue learning about our work, events, campaigns, team, or ways to get involved.</p>
+<div aria-label="Helpful links" class="quick-links">
+<a class="quick-link primary" href="/"><i class="fas fa-home"></i> Home</a>
+<a class="quick-link" href="/events-campaigns"><i class="fas fa-calendar-days"></i> Events &amp; Campaigns</a>
+<a class="quick-link" href="/projects"><i class="fas fa-folder-open"></i> Projects</a>
+<a class="quick-link" href="/team"><i class="fas fa-users"></i> Team</a>
+<a class="quick-link" href="/contact"><i class="fas fa-envelope"></i> Contact</a>
+</div>
+</div>
+</main>
+<section id="cta">
+<h2 class="fi">Need Assistance?</h2>
+<p class="fi fd1">If you were looking for specific information, our team will be glad to help direct you.</p>
+<div class="cta-btns fi fd2">
+<a class="bp" href="/contact"><i class="fas fa-envelope"></i> Contact EHF</a>
+<a class="bo" href="/events-campaigns"><i class="fas fa-calendar-days"></i> View Events &amp; Campaigns</a>
+</div>
+</section>
+<footer>
+<div class="ftg">
+<div class="ftb">
+<div style="display:flex;align-items:center;gap:10px">
+<img alt="EHF Logo" src="ehf-logo.jpg" style="width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--gn)"/>
+<div><span class="norg" style="color:#fff">Emmanuel Humanitarian</span><span class="nsub">Foundation • Nigeria</span></div>
+</div>
+<p>Helping People &amp; Spreading Hope — one community at a time. EHF works to alleviate human suffering and promote sustainable development across Nigeria.</p>
+<div class="srow">
+<a class="sb fb" href="https://facebook.com/emmanuelhumanitarianfoundationnigeria" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a class="sb tw" href="https://twitter.com/EHF_African" target="_blank"><i class="fab fa-x-twitter"></i></a>
+<a class="sb em" href="mailto:info.ehfn@gmail.com"><i class="fas fa-envelope"></i></a>
+</div>
+</div>
+<div class="ftc">
+<h4>Pages</h4>
+<a href="./">Home</a>
+<a href="about">About EHF</a>
+<a href="projects">Projects</a>
+<a href="team">Our Team</a>
+<a href="contact">Get Involved</a>
+</div>
+<div class="ftc">
+<h4>Events &amp; Campaigns</h4>
+<a href="events-campaigns">Day 1 — Health &amp; Nutrition</a>
+<a href="events-campaigns">Day 2 — Education</a>
+<a href="events-campaigns">Day 3 — Peacebuilding</a>
+<a href="events-campaigns">Day 4 — WASH</a>
+<a href="events-campaigns">Day 5 — GBV Response</a>
+</div>
+<div class="ftc"><h4>Contact</h4><a href="mailto:info.ehfn@gmail.com">info.ehfn@gmail.com</a><a href="https://twitter.com/EHF_African" rel="noopener" target="_blank">@EHF_African</a><div class="footer-location"><span class="footer-location-label"><i class="fas fa-location-dot"></i> Office Location</span><p>No. 3 Sabru House,<br/>Atiku Abubakar Way,<br/>Jimeta, Yola,<br/>Adamawa State, Nigeria.</p><a class="footer-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=No.%203%20Sabru%20House%2C%20Atiku%20Abubakar%20Way%2C%20Jimeta%2C%20Yola%2C%20Adamawa%20State%2C%20Nigeria" rel="noopener" target="_blank">Open Location on Google Maps</a></div></div>
+</div>
+<div class="ftbot">
+<p>© 2025 <span>Emmanuel Humanitarian Foundation (EHF)</span>. All rights reserved.</p>
+</div>
+</footer>
+<script>
+const hbg=document.getElementById('hbg'),mob=document.getElementById('mob');
+hbg.addEventListener('click',()=>{hbg.classList.toggle('open');mob.classList.toggle('open')});
+mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hbg.classList.remove('open');mob.classList.remove('open')}));
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');obs.unobserve(x.target)}})},{threshold:0.12});
+document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
+</script>
 </body>
 </html>
