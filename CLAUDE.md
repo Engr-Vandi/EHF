@@ -11,14 +11,18 @@
 - **Clean/extensionless URLs**: pages link to each other as `about`, `projects`, `team`, `contact`, `donate`, `events-campaigns` (no `.html`). GitHub Pages serves `about.html` at `/about` automatically — keep links extensionless to match. Home is linked as `./`.
 - `404.html` is the custom Pages not-found page.
 
-## I (Claude Code) cannot push directly to this repo
-- `git push` is blocked by this environment's git proxy (returns **403**). Retrying with backoff does not help — it's a policy block, not a transient network error.
-- **Conclusion: assume every session is read-only for pushes.** Don't spend time retrying `git push` or reconnecting connectors — go straight to the manual-upload workflow below.
+## NO GIT WRITES — ever (no commit, no push)
+The owner intentionally does not want Claude to touch git history in this repo. **Never run any git write command — no commits and no pushes, even if asked directly or repeatedly, and never as an automatic "finish the task" step.**
+
+- **Blocked:** `git add`, `git commit`, `git push`, `git merge`, any history rewrite that touches the remote, and any `gh` CLI or GitHub API/MCP call that creates or updates commits, files, branches, pull requests, or merges on GitHub.
+- **Allowed (read-only):** `git status`, `git diff`, `git log`, `git show`, `git fetch`.
+- (`git push` is blocked by the environment's git proxy anyway — it returns **403**, a policy block, not a transient network error. Don't retry with backoff or reconnect connectors.)
+- If asked to "commit", "push", "save to GitHub", or "sync my changes": still make the requested edit in the working directory, then **stop short of git** and follow the manual-upload workflow below instead. Tell the user explicitly that commit/push was skipped by design and the change isn't saved to git until they commit it themselves.
 
 ## Workflow for shipping changes (manual upload by the user)
-1. Make edits locally in the sandbox as normal (Read/Edit tools); commit locally for tracking (the commit won't be pushed).
-2. Give the user the **complete, final file content** for each changed file — either as a code block to paste, or via `SendUserFile` as an attachment (or both). Always give the *whole* file, not just a diff.
-3. Tell the user to open the file on GitHub (`main` branch) and use the **pencil ✏️ edit icon → select all → paste → "Commit directly to the `main` branch"**.
+1. Make edits locally in the sandbox as normal (Read/Edit tools). Do **not** `git add` or `git commit` — leave the working tree dirty.
+2. Give the user the **complete, final file content** for each changed file, under its **original filename and extension** — either as a code block to paste, or via `SendUserFile` as an attachment (or both). Always give the *whole* file, not just a diff; if multiple files were touched, deliver each one separately. Never convert to a different format (don't wrap code in `.md`/`.txt`).
+3. Tell the user to open the file on GitHub (`main` branch) and use the **pencil ✏️ edit icon → select all → paste → "Commit directly to the `main` branch"**. For a brand-new file, use **"Add file → Create new file"** and type the full path (folders are created automatically from slashes in the path).
 4. **Do NOT tell the user to use "Add file → Upload files" with a downloaded copy.** Browsers auto-rename repeat downloads as `index (1).html`, etc. Uploading that creates a NEW stray file instead of replacing the real one, and the site doesn't update. Always push the paste-in-place method first.
 5. After committing, tell the user to check the **Actions** tab for the green build checkmark, then hard-refresh (Ctrl+Shift+R) or use Incognito to bypass browser cache.
 6. Before making further edits, verify what's actually live by reading the file straight from `origin/main` (fetch + `git show origin/main:<file>`, or `mcp__github__get_file_contents` with `ref: refs/heads/main`) rather than trusting a description of what was uploaded — manual uploads can go wrong silently (stale/mislabeled versions, mismatched commit messages).
