@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ehfng.org/sitemap.xml
+Sitemap: https://giabridals.victorvandi.com/sitemap.xml
