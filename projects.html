@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Projects — Emmanuel Humanitarian Foundation (EHF)</title>
-<meta content="Explore Emmanuel Humanitarian Foundation projects, including climate action, health education, community outreach, peacebuilding, environmental conservation, and humanitarian impact stories across Nigeria." name="description"/>
+<meta content="Explore Emmanuel Humanitarian Foundation projects, including the Tree Planting Campaign 2026 in Madagali, climate action, health education, peacebuilding, and community outreach across Nigeria." name="description"/>
 <meta content="Emmanuel Humanitarian Foundation (EHF)" name="author"/>
 <meta content="index, follow" name="robots"/>
 <meta content="#1a2e6e" name="theme-color"/>
@@ -14,11 +14,11 @@
 <meta content="Emmanuel Humanitarian Foundation (EHF)" property="og:site_name"/>
 <meta content="en_NG" property="og:locale"/>
 <meta content="Projects — Emmanuel Humanitarian Foundation (EHF)" property="og:title"/>
-<meta content="Explore EHF projects, including climate action, health education, environmental conservation, peacebuilding, community outreach, and humanitarian impact stories across Nigeria." property="og:description"/>
+<meta content="Explore EHF projects, including the Tree Planting Campaign 2026 in Madagali, climate action, health education, peacebuilding, and community outreach across Nigeria." property="og:description"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="@EHF_African" name="twitter:site"/>
 <meta content="Projects — Emmanuel Humanitarian Foundation (EHF)" name="twitter:title"/>
-<meta content="Explore EHF projects, including climate action, health education, environmental conservation, peacebuilding, community outreach, and humanitarian impact stories across Nigeria." name="twitter:description"/>
+<meta content="Explore EHF projects, including the Tree Planting Campaign 2026 in Madagali, climate action, health education, peacebuilding, and community outreach across Nigeria." name="twitter:description"/>
 <link href="https://ehfng.org/projects" rel="canonical"/>
 <meta content="https://ehfng.org/projects" property="og:url"/>
 <meta content="https://ehfng.org/og-image.jpg" property="og:image"/>
@@ -177,6 +177,27 @@ body.page-projects .project-slide-dots button.active{width:24px;border-radius:99
 @media(max-width:768px){body.page-projects .project-gallery{padding:10px}body.page-projects .project-slider,body.page-projects .project-slide-frame{min-height:360px}body.page-projects .project-slide-btn{width:38px;height:38px}body.page-projects .project-slide-prev{left:10px}body.page-projects .project-slide-next{right:10px}}
 @media(max-width:560px){body.page-projects .project-slider,body.page-projects .project-slide-frame{min-height:320px;border-radius:13px}body.page-projects .project-slide{padding:6px}body.page-projects .project-slide-btn{width:34px;height:34px;font-size:12px}body.page-projects .project-slide-dots{bottom:12px}}
 
+/* Landscape (16:9) photo sets: fill the frame edge-to-edge instead of letterboxing */
+body.page-projects .project-gallery.gallery-wide{align-items:center}
+body.page-projects .project-slider.slider-wide{min-height:0;height:auto;width:100%;aspect-ratio:16/9}
+body.page-projects .slider-wide .project-slide-frame{min-height:0;height:100%;aspect-ratio:16/9}
+body.page-projects .slider-wide .project-slide{object-fit:cover;padding:0}
+@media(max-width:1024px){body.page-projects .project-slider.slider-wide,body.page-projects .slider-wide .project-slide-frame{min-height:0}}
+@media(max-width:768px){body.page-projects .project-slider.slider-wide,body.page-projects .slider-wide .project-slide-frame{min-height:0}}
+@media(max-width:560px){body.page-projects .project-slider.slider-wide,body.page-projects .slider-wide .project-slide-frame{min-height:0}}
+
+/* Branded panel for projects awaiting verified field photography */
+body.page-projects .project-nophoto{position:relative;width:100%;height:100%;min-height:520px;display:flex;align-items:center;justify-content:center;text-align:center;padding:34px;border-radius:16px;overflow:hidden;color:#fff;background:linear-gradient(150deg,var(--nv) 0%,var(--nv3) 58%,var(--gn) 165%);border:1px solid rgba(26,46,110,.08)}
+body.page-projects .project-nophoto::before{content:'';position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(46,139,87,.30) 0%,transparent 70%);top:-90px;right:-80px;pointer-events:none}
+body.page-projects .project-nophoto-in{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:13px;max-width:330px}
+body.page-projects .project-nophoto i{font-size:42px;color:#7ee8a2}
+body.page-projects .project-nophoto h4{font-size:18px;font-weight:800;margin:0;color:#fff;line-height:1.35}
+body.page-projects .project-nophoto p{font-size:12.5px;color:rgba(255,255,255,.76);line-height:1.7;margin:0}
+body.page-projects .project-nophoto span.np-tag{display:inline-block;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1.4px;padding:5px 12px;border-radius:999px;background:rgba(46,139,87,.24);border:1px solid rgba(126,232,162,.42);color:#7ee8a2}
+@media(max-width:1024px){body.page-projects .project-nophoto{min-height:440px}}
+@media(max-width:768px){body.page-projects .project-nophoto{min-height:360px}}
+@media(max-width:560px){body.page-projects .project-nophoto{min-height:300px;border-radius:13px;padding:26px}}
+
 </style>
 <script type="application/ld+json">
 {
@@ -250,12 +271,13 @@ body.page-projects .project-slide-dots button.active{width:24px;border-radius:99
 </div>
 <div class="project-grid">
 <article class="project-card project-featured fi">
-<div class="project-gallery">
-<div aria-label="Climate Change Mitigation project photos" class="project-slider" data-slider="">
+<div class="project-gallery gallery-wide">
+<div aria-label="Tree Planting Campaign 2026 project photos" class="project-slider slider-wide" data-slider="">
 <div class="project-slide-frame">
-<img alt="EHF team with olive seedlings in Mijilu Community, Adamawa State" class="project-slide active" loading="lazy" src="project-climate-seedlings-1.jpg"/>
-<img alt="EHF climate change awareness and tree planting sensitization session" class="project-slide" loading="lazy" src="project-climate-seedlings-2.jpg"/>
-<img alt="EHF distributing olive seedlings to community members" class="project-slide" loading="lazy" src="project-climate-seedlings-3.jpg"/>
+<img alt="EHF and partner staff holding tree seedlings beside the Mafer Primary School signboard, Madagali LGEA, Adamawa State" class="project-slide active" loading="lazy" src="project-tree-planting-1.jpg"/>
+<img alt="An EHF field officer helping pupils plant a tree seedling during the Tree Planting Campaign 2026 in Madagali" class="project-slide" loading="lazy" src="project-tree-planting-2.jpg"/>
+<img alt="EHF team in front of the Tree Planting Campaign 2026 banner at Mafer Primary School, Madagali" class="project-slide" loading="lazy" src="project-tree-planting-3.jpg"/>
+<img alt="An EHF officer handing a tree seedling to a pupil during the Tree Planting Campaign 2026" class="project-slide" loading="lazy" src="project-tree-planting-4.jpg"/>
 </div>
 <button aria-label="Previous photo" class="project-slide-btn project-slide-prev" data-slide-prev="" type="button"><i class="fas fa-chevron-left"></i></button>
 <button aria-label="Next photo" class="project-slide-btn project-slide-next" data-slide-next="" type="button"><i class="fas fa-chevron-right"></i></button>
@@ -263,11 +285,41 @@ body.page-projects .project-slide-dots button.active{width:24px;border-radius:99
 <button aria-label="Show photo 1" class="active" data-slide-dot="0" type="button"></button>
 <button aria-label="Show photo 2" data-slide-dot="1" type="button"></button>
 <button aria-label="Show photo 3" data-slide-dot="2" type="button"></button>
+<button aria-label="Show photo 4" data-slide-dot="3" type="button"></button>
 </div>
 </div>
 </div>
 <div class="project-body">
 <span class="project-tag">Project 01</span>
+<h3>Tree Planting Campaign 2026 — Mafer Primary School, Madagali</h3>
+<p>Emmanuel Humanitarian Foundation (EHF) took part in the Tree Planting Campaign 2026 at Mafer Primary School, Madagali Local Government Area of Adamawa State, in collaboration with Naibah Heritage Foundation and Bidan's CARE Foundation.</p>
+<p>Pupils, teachers, community elders, women, and traditional leaders joined EHF field officers to plant tree seedlings across the school grounds and surrounding farmland. Participants received practical guidance on planting and caring for young trees, alongside awareness on deforestation, climate change, and the role of young people in protecting their environment.</p>
+<div class="project-impact">
+<div><strong>Tree Planting</strong><span>Core activity</span></div>
+<div><strong>Mafer</strong><span>School &amp; community reached</span></div>
+<div><strong>Climate Action</strong><span>Focus area</span></div>
+</div>
+<ul class="project-meta">
+<li><i class="fas fa-map-marker-alt"></i> Mafer Primary School, Madagali LGA, Adamawa State</li>
+<li><i class="fas fa-calendar-alt"></i> Tree Planting Campaign 2026</li>
+<li><i class="fas fa-handshake-angle"></i> In collaboration with Naibah Heritage Foundation and Bidan's CARE Foundation</li>
+<li><i class="fas fa-users"></i> Pupils, teachers, community elders, women, and traditional leaders</li>
+</ul>
+</div>
+</article>
+<article class="project-card project-featured fi fd1">
+<div class="project-gallery">
+<div class="project-nophoto" role="img" aria-label="Field photography for this project is being verified before publication">
+<div class="project-nophoto-in">
+<span class="np-tag">Photo Update Pending</span>
+<i class="fas fa-seedling"></i>
+<h4>Verified field photos coming soon</h4>
+<p>EHF publishes only genuine photographs taken during its own field activities. Images from this intervention will appear here once verified.</p>
+</div>
+</div>
+</div>
+<div class="project-body">
+<span class="project-tag">Project 02</span>
 <h3>Climate Change Mitigation &amp; Environmental Conservation Initiative</h3>
 <p>Emmanuel Humanitarian Foundation (EHF) distributed 100 olive seedlings to households and community stakeholders in Mijilu Community, Mubi North Local Government Area of Adamawa State. The initiative promoted tree planting, environmental conservation, and community awareness on climate change adaptation.</p>
 <p>Community members, youth groups, women groups, and local leaders participated in the exercise and received guidance on proper planting and maintenance of the seedlings. The activity strengthened local participation in environmental protection and encouraged shared responsibility for preserving natural resources.</p>
@@ -283,25 +335,19 @@ body.page-projects .project-slide-dots button.active{width:24px;border-radius:99
 </ul>
 </div>
 </article>
-<article class="project-card project-featured fi fd1">
+<article class="project-card project-featured fi fd2">
 <div class="project-gallery">
-<div aria-label="Menstrual Hygiene Awareness project photos" class="project-slider" data-slider="">
-<div class="project-slide-frame">
-<img alt="EHF menstrual hygiene awareness and sanitary pad distribution in Pariye Community" class="project-slide active" loading="lazy" src="project-menstrual-hygiene-1.jpg"/>
-<img alt="EHF educational support group photo with adolescent girls and young women" class="project-slide" loading="lazy" src="project-menstrual-hygiene-2.jpg"/>
-<img alt="EHF team conducting menstrual hygiene education session" class="project-slide" loading="lazy" src="project-menstrual-hygiene-3.jpg"/>
-</div>
-<button aria-label="Previous photo" class="project-slide-btn project-slide-prev" data-slide-prev="" type="button"><i class="fas fa-chevron-left"></i></button>
-<button aria-label="Next photo" class="project-slide-btn project-slide-next" data-slide-next="" type="button"><i class="fas fa-chevron-right"></i></button>
-<div aria-label="Project photo controls" class="project-slide-dots">
-<button aria-label="Show photo 1" class="active" data-slide-dot="0" type="button"></button>
-<button aria-label="Show photo 2" data-slide-dot="1" type="button"></button>
-<button aria-label="Show photo 3" data-slide-dot="2" type="button"></button>
+<div class="project-nophoto" role="img" aria-label="Field photography for this project is being verified before publication">
+<div class="project-nophoto-in">
+<span class="np-tag">Photo Update Pending</span>
+<i class="fas fa-hand-holding-heart"></i>
+<h4>Verified field photos coming soon</h4>
+<p>Any images published from this outreach will respect the privacy and dignity of the girls and young women who took part.</p>
 </div>
 </div>
 </div>
 <div class="project-body">
-<span class="project-tag">Project 02</span>
+<span class="project-tag">Project 03</span>
 <h3>Menstrual Hygiene Awareness &amp; Sanitary Pad Distribution</h3>
 <p>On 6 December 2025, Emmanuel Humanitarian Foundation (EHF) conducted a menstrual hygiene awareness campaign and distributed 50 sanitary pads to adolescent girls and young women in Pariye Community, Maiha Local Government Area of Adamawa State.</p>
 <p>The intervention improved menstrual health knowledge, promoted proper personal hygiene practices, and encouraged open discussion around menstruation. Participants received guidance on menstrual health management, proper use and disposal of sanitary pads, hand hygiene, and breaking stigma and misconceptions associated with menstruation.</p>
@@ -318,7 +364,7 @@ body.page-projects .project-slide-dots button.active{width:24px;border-radius:99
 </ul>
 </div>
 </article>
-<article class="project-card project-featured fi fd2">
+<article class="project-card project-featured fi fd3">
 <div class="project-gallery">
 <div aria-label="Humanitarian and Peacebuilding project photos" class="project-slider" data-slider="">
 <div class="project-slide-frame">
@@ -336,7 +382,7 @@ body.page-projects .project-slide-dots button.active{width:24px;border-radius:99
 </div>
 </div>
 <div class="project-body">
-<span class="project-tag">Project 03</span>
+<span class="project-tag">Project 04</span>
 <h3>Humanitarian &amp; Peacebuilding Visit to Anguwan Rukuba</h3>
 <p>On 20 April 2026, Emmanuel Humanitarian Foundation (EHF) conducted a humanitarian and peacebuilding visit to Anguwan Rukuba in Jos North Local Government Area, Plateau State, following a recent attack that affected the community.</p>
 <p>The visit engaged women and young girls in discussions on peacebuilding, conflict prevention, social cohesion, and community resilience. Participants received education on peaceful coexistence, dialogue, non-violent conflict resolution, and the critical role of women and girls in promoting peace and stability within families and communities.</p>
