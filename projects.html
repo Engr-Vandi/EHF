@@ -186,17 +186,14 @@ body.page-projects .slider-wide .project-slide{object-fit:cover;padding:0}
 @media(max-width:768px){body.page-projects .project-slider.slider-wide,body.page-projects .slider-wide .project-slide-frame{min-height:0}}
 @media(max-width:560px){body.page-projects .project-slider.slider-wide,body.page-projects .slider-wide .project-slide-frame{min-height:0}}
 
-/* Branded panel for projects awaiting verified field photography */
-body.page-projects .project-nophoto{position:relative;width:100%;height:100%;min-height:520px;display:flex;align-items:center;justify-content:center;text-align:center;padding:34px;border-radius:16px;overflow:hidden;color:#fff;background:linear-gradient(150deg,var(--nv) 0%,var(--nv3) 58%,var(--gn) 165%);border:1px solid rgba(26,46,110,.08)}
-body.page-projects .project-nophoto::before{content:'';position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(46,139,87,.30) 0%,transparent 70%);top:-90px;right:-80px;pointer-events:none}
-body.page-projects .project-nophoto-in{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:13px;max-width:330px}
-body.page-projects .project-nophoto i{font-size:42px;color:#7ee8a2}
-body.page-projects .project-nophoto h4{font-size:18px;font-weight:800;margin:0;color:#fff;line-height:1.35}
-body.page-projects .project-nophoto p{font-size:12.5px;color:rgba(255,255,255,.76);line-height:1.7;margin:0}
-body.page-projects .project-nophoto span.np-tag{display:inline-block;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1.4px;padding:5px 12px;border-radius:999px;background:rgba(46,139,87,.24);border:1px solid rgba(126,232,162,.42);color:#7ee8a2}
-@media(max-width:1024px){body.page-projects .project-nophoto{min-height:440px}}
-@media(max-width:768px){body.page-projects .project-nophoto{min-height:360px}}
-@media(max-width:560px){body.page-projects .project-nophoto{min-height:300px;border-radius:13px;padding:26px}}
+/* Full-width summary card for projects published without field photography */
+body.page-projects .project-textonly{display:block;border-left:5px solid var(--gn)}
+body.page-projects .project-textonly .project-body{padding:30px 34px}
+body.page-projects .project-textonly .project-impact{grid-template-columns:repeat(3,minmax(0,1fr));max-width:760px}
+body.page-projects .project-textonly .project-meta{max-width:860px}
+@media(max-width:560px){body.page-projects .project-textonly .project-body{padding:22px}body.page-projects .project-textonly .project-impact{grid-template-columns:1fr}}
+
+
 
 </style>
 <script type="application/ld+json">
@@ -274,10 +271,10 @@ body.page-projects .project-nophoto span.np-tag{display:inline-block;font-size:1
 <div class="project-gallery gallery-wide">
 <div aria-label="Tree Planting Campaign 2026 project photos" class="project-slider slider-wide" data-slider="">
 <div class="project-slide-frame">
-<img alt="EHF and partner staff holding tree seedlings beside the Mafer Primary School signboard, Madagali LGEA, Adamawa State" class="project-slide active" loading="lazy" src="project-tree-planting-1.jpg"/>
-<img alt="An EHF field officer helping pupils plant a tree seedling during the Tree Planting Campaign 2026 in Madagali" class="project-slide" loading="lazy" src="project-tree-planting-2.jpg"/>
-<img alt="EHF team in front of the Tree Planting Campaign 2026 banner at Mafer Primary School, Madagali" class="project-slide" loading="lazy" src="project-tree-planting-3.jpg"/>
-<img alt="An EHF officer handing a tree seedling to a pupil during the Tree Planting Campaign 2026" class="project-slide" loading="lazy" src="project-tree-planting-4.jpg"/>
+<img alt="EHF and partner staff holding tree seedlings beside the Mafer Primary School signboard, Madagali LGEA, Adamawa State" class="project-slide active" loading="lazy" src="projecttreeplanting1.jpg"/>
+<img alt="An EHF field officer helping pupils plant a tree seedling during the Tree Planting Campaign 2026 in Madagali" class="project-slide" loading="lazy" src="projecttreeplanting2.jpg"/>
+<img alt="EHF team in front of the Tree Planting Campaign 2026 banner at Mafer Primary School, Madagali" class="project-slide" loading="lazy" src="projecttreeplanting3.jpg"/>
+<img alt="An EHF officer handing a tree seedling to a pupil during the Tree Planting Campaign 2026" class="project-slide" loading="lazy" src="projecttreeplanting4.jpg"/>
 </div>
 <button aria-label="Previous photo" class="project-slide-btn project-slide-prev" data-slide-prev="" type="button"><i class="fas fa-chevron-left"></i></button>
 <button aria-label="Next photo" class="project-slide-btn project-slide-next" data-slide-next="" type="button"><i class="fas fa-chevron-right"></i></button>
@@ -308,13 +305,21 @@ body.page-projects .project-nophoto span.np-tag{display:inline-block;font-size:1
 </div>
 </article>
 <article class="project-card project-featured fi fd1">
-<div class="project-gallery">
-<div class="project-nophoto" role="img" aria-label="Field photography for this project is being verified before publication">
-<div class="project-nophoto-in">
-<span class="np-tag">Photo Update Pending</span>
-<i class="fas fa-seedling"></i>
-<h4>Verified field photos coming soon</h4>
-<p>EHF publishes only genuine photographs taken during its own field activities. Images from this intervention will appear here once verified.</p>
+<div class="project-gallery gallery-wide">
+<div aria-label="Climate change and environmental conservation project photos" class="project-slider slider-wide" data-slider="">
+<div class="project-slide-frame">
+<img alt="EHF presenting tree seedlings to community elders and local leaders during an environmental conservation outreach in Adamawa State" class="project-slide active" loading="lazy" src="projectclimate1.jpg"/>
+<img alt="Community members and stakeholders holding tree seedlings received from EHF in Adamawa State" class="project-slide" loading="lazy" src="projectclimate2.jpg"/>
+<img alt="Community members planting a tree seedling together during an EHF climate action outreach" class="project-slide" loading="lazy" src="projectclimate3.jpg"/>
+<img alt="A woman planting a tree seedling during an EHF environmental conservation activity" class="project-slide" loading="lazy" src="projectclimate4.jpg"/>
+</div>
+<button aria-label="Previous photo" class="project-slide-btn project-slide-prev" data-slide-prev="" type="button"><i class="fas fa-chevron-left"></i></button>
+<button aria-label="Next photo" class="project-slide-btn project-slide-next" data-slide-next="" type="button"><i class="fas fa-chevron-right"></i></button>
+<div aria-label="Project photo controls" class="project-slide-dots">
+<button aria-label="Show photo 1" class="active" data-slide-dot="0" type="button"></button>
+<button aria-label="Show photo 2" data-slide-dot="1" type="button"></button>
+<button aria-label="Show photo 3" data-slide-dot="2" type="button"></button>
+<button aria-label="Show photo 4" data-slide-dot="3" type="button"></button>
 </div>
 </div>
 </div>
@@ -335,17 +340,7 @@ body.page-projects .project-nophoto span.np-tag{display:inline-block;font-size:1
 </ul>
 </div>
 </article>
-<article class="project-card project-featured fi fd2">
-<div class="project-gallery">
-<div class="project-nophoto" role="img" aria-label="Field photography for this project is being verified before publication">
-<div class="project-nophoto-in">
-<span class="np-tag">Photo Update Pending</span>
-<i class="fas fa-hand-holding-heart"></i>
-<h4>Verified field photos coming soon</h4>
-<p>Any images published from this outreach will respect the privacy and dignity of the girls and young women who took part.</p>
-</div>
-</div>
-</div>
+<article class="project-card project-textonly fi fd2">
 <div class="project-body">
 <span class="project-tag">Project 03</span>
 <h3>Menstrual Hygiene Awareness &amp; Sanitary Pad Distribution</h3>
